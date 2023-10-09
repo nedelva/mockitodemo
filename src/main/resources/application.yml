@@ -1,0 +1,17 @@
+micronaut:
+  application:
+    name: mockitodemo
+  http:
+    services:
+      my-service:
+        urls:
+          - '${aws.apigateway.url}/some-service-v1'
+  caches:
+    my-cache:
+      initial-capacity: 20
+      record-stats: true
+      maximum-size: 2000
+aws:
+  apigateway:
+      url: 'http://localhost:4444'
+
